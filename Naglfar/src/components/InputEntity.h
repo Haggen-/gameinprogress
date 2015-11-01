@@ -5,14 +5,16 @@
 #ifndef PILLAGE_INPUTENTITY_H
 #define PILLAGE_INPUTENTITY_H
 
-namespace Engine {
+#include <SDL2/SDL_events.h>
+
+namespace Naglfar {
 
     class Entity;
 
     class InputEntity {
     public:
         virtual ~InputEntity() {};
-        virtual void update(Entity &entity) = 0;
+        virtual void update(Entity &entity, SDL_Event &event) = 0;
     };
 }
 

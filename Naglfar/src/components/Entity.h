@@ -5,23 +5,19 @@
 #ifndef PILLAGE_ENTITY_H
 #define PILLAGE_ENTITY_H
 
-
-
-#include <Engine/Renderer/Renderer.h>
-
 #include "GraphicsEntity.h"
 #include "InputEntity.h"
 #include "PhysicsEntity.h"
 
-namespace Engine {
+namespace Naglfar {
     class Entity {
     public:
         Entity(GraphicsEntity *graphics, InputEntity *input, PhysicsEntity *physics) :
                 graphics(graphics), input(input), physics(physics)
         {}
 
-        virtual void update(Renderer &renderer) {
-            input->update(*this);
+        virtual void update(Renderer &renderer, SDL_Event &event) {
+            input->update(*this, event);
             physics->update(*this);
             graphics->update(*this, renderer);
         }

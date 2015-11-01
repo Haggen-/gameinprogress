@@ -5,16 +5,17 @@
 #ifndef PILLAGE_GRAPHICSENTITY_H
 #define PILLAGE_GRAPHICSENTITY_H
 
-#include <Engine/Renderer/Renderer.h>
+#include "../graphics/Renderer.h"
 
-namespace Engine {
-
+namespace Naglfar {
     class Entity;
+    class Renderer;
 
     class GraphicsEntity {
     public:
+        GraphicsEntity();
         virtual ~GraphicsEntity() {};
-        virtual void update(Entity &entity, Renderer &renderer) = 0;
+        virtual void update(Entity &entity, Naglfar::Renderer &renderer) = 0;
     };
 }
 

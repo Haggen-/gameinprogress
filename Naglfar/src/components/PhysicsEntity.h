@@ -4,7 +4,8 @@
 
 #ifndef PILLAGE_PHYSICSENTITY_H
 #define PILLAGE_PHYSICSENTITY_H
-namespace Engine {
+
+namespace Naglfar {
 
     class Entity;
 
