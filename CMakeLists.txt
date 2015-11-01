@@ -3,16 +3,20 @@ cmake_minimum_required(VERSION 3.0.2)
 set(PROJECT_NAME "GameInProgress")
 project(${PROJECT_NAME})
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -std=gnu++14")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -std=c++11")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -O0 -g")
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -O3")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -O1")
 
 set(${PROJECT_NAME}_SOURCES
     src/main.cpp
-    )
+    src/Network/Client.cpp
+    src/Network/Network.cpp
+)
 
 set(${PROJECT_NAME}_HEADERS
-    )
+    src/Network/Client.h
+    src/Network/Network.h
+)
 
 add_subdirectory(Naglfar)
 
