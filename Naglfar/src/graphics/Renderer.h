@@ -2,8 +2,8 @@
 // Created by haggen on 5/15/15.
 //
 
-#ifndef PILLAGE_RENDERER_H
-#define PILLAGE_RENDERER_H
+#ifndef NAGLFAR_RENDERER_H
+#define NAGLFAR_RENDERER_H
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_log.h>
@@ -28,4 +28,4 @@ namespace Naglfar {
 }
 
 
-#endif //PILLAGE_RENDERER_H
+#endif //NAGLFAR_RENDERER_H

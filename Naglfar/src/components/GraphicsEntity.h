@@ -2,8 +2,8 @@
 // Created by haggen on 5/16/15.
 //
 
-#ifndef PILLAGE_GRAPHICSENTITY_H
-#define PILLAGE_GRAPHICSENTITY_H
+#ifndef NAGLFAR_GRAPHICSENTITY_H
+#define NAGLFAR_GRAPHICSENTITY_H
 
 #include "../graphics/Renderer.h"
 
@@ -20,4 +20,4 @@ namespace Naglfar {
     };
 }
 
-#endif //PILLAGE_GRAPHICSENTITY_H
+#endif //NAGLFAR_GRAPHICSENTITY_H

@@ -2,8 +2,8 @@
 // Created by haggen on 5/16/15.
 //
 
-#ifndef PILLAGE_ENTITY_H
-#define PILLAGE_ENTITY_H
+#ifndef NAGLFAR_ENTITY_H
+#define NAGLFAR_ENTITY_H
 
 #include "GraphicsEntity.h"
 #include "InputEntity.h"
@@ -33,4 +33,4 @@ namespace Naglfar {
     };
 }
 
-#endif //PILLAGE_ENTITY_H
+#endif //NAGLFAR_ENTITY_H

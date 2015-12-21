@@ -2,8 +2,8 @@
 // Created by haggen on 5/16/15.
 //
 
-#ifndef PILLAGE_INPUTENTITY_H
-#define PILLAGE_INPUTENTITY_H
+#ifndef NAGLFAR_INPUTENTITY_H
+#define NAGLFAR_INPUTENTITY_H
 
 #include <SDL2/SDL_events.h>
 
@@ -20,4 +20,4 @@ namespace Naglfar {
 
 
 
-#endif //PILLAGE_INPUTENTITY_H
+#endif //NAGLFAR_INPUTENTITY_H

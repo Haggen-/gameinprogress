@@ -2,8 +2,8 @@
 // Created by haggen on 5/16/15.
 //
 
-#ifndef PILLAGE_PHYSICSENTITY_H
-#define PILLAGE_PHYSICSENTITY_H
+#ifndef NAGLFAR_PHYSICSENTITY_H
+#define NAGLFAR_PHYSICSENTITY_H
 
 namespace Naglfar {
 
@@ -16,4 +16,4 @@ namespace Naglfar {
     };
 }
 
-#endif //PILLAGE_PHYSICSENTITY_H
+#endif //NAGLFAR_PHYSICSENTITY_H
