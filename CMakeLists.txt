@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0.2)
 set(PROJECT_NAME "GameInProgress")
 project(${PROJECT_NAME})
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -std=gnu++14")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -std=gnu++14 -DLINUX")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -O0 -g")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -O3")
 
@@ -23,6 +23,8 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_LIST_DIR}/cmake")
 find_package(SDL2 REQUIRED sdl2)
 find_package(SDL2IMAGE REQUIRED sdl2image)
 find_package(Lua REQUIRED)
+find_package(GLEW REQUIRED)
+find_package(OpenGL REQUIRED)
 
 if(NOT ${LUA_FOUND})
     message(FATAL_ERROR "Could not find LUA dependency!")
@@ -36,5 +38,13 @@ if(NOT ${SDL2IMAGE_FOUND})
     message(FATAL_ERROR "COULD NOT FIND SDL_IMAGE")
 endif()
 
-include_directories(src ${LUA_INCLUDE_DIR} ${${PROJECT_NAME}_INCLUDE_DIRS} ${SDL2_INCLUDE_DIR})
-target_link_libraries(${PROJECT_NAME} ${LUA_LIBRARY} ${SDL2_LIBRARY} ${SDLIMAGE_LIBRARY} Naglfar)
+if(NOT ${OPENGL_FOUND})
+    message(FATAL_ERROR "COULD NOT FIND OpenGL")
+endif()
+
+if(NOT ${GLEW_FOUND})
+    message(FATAL_ERROR "COULD NOT FIND OpenGL Extension Wrangler")
+endif()
+
+include_directories(src ${LUA_INCLUDE_DIR} ${${PROJECT_NAME}_INCLUDE_DIRS} ${SDL2_INCLUDE_DIR} ${GLEW_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${LUA_LIBRARY} ${SDL2_LIBRARY} ${SDLIMAGE_LIBRARY} ${GLEW_LIBRARIES} Naglfar)

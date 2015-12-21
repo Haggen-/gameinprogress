@@ -16,6 +16,7 @@ namespace Naglfar {
         GraphicsEntity();
         virtual ~GraphicsEntity() {};
         virtual void update(Entity &entity, Naglfar::Renderer &renderer) = 0;
+        virtual void getDrawable();
     };
 }
 

@@ -8,6 +8,8 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_log.h>
 #include <SDL2/SDL_render.h>
+#include <GL/glew.h>
+#include <GL/gl.h>
 #include "../window/Window.h"
 #include "../components/GraphicsEntity.h"
 

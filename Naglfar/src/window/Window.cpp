@@ -6,8 +6,11 @@
 #include "Window.h"
 
 Naglfar::Window::Window(std::string windowName) {
-    window = SDL_CreateWindow(windowName.c_str(), 0, 0, 640, 480, SDL_WINDOW_SHOWN | SDL_WINDOW_MOUSE_FOCUS);
-    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+    SDL_CreateWindowAndRenderer(800, 600, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC
+                                          | SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL | SDL_WINDOW_MOUSE_FOCUS,
+                                &window, &renderer);
+
+    SDL_SetWindowTitle(window, windowName.c_str());
 
     if(renderer == nullptr) {
         SDL_LogError(0, "Unable to initialize renderer:", SDL_GetError());
@@ -15,7 +18,6 @@ Naglfar::Window::Window(std::string windowName) {
         SDL_Quit();
     }
 
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
 }
 
 Naglfar::Window::~Window() {
