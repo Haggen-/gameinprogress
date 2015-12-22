@@ -16,8 +16,9 @@ set(${ENGINE_NAME}_HEADERS
     src/components/GraphicsEntity.h
     src/components/InputEntity.h
     src/components/PhysicsEntity.h
+    src/components/Scene.h
 )
 
 include_directories(${${ENGINE_NAME}_HEADERS})
 
-add_library(${ENGINE_NAME} ${${ENGINE_NAME}_SOURCES} ${${ENGINE_NAME}_HEADERS})
+add_library(${ENGINE_NAME} ${${ENGINE_NAME}_SOURCES} ${${ENGINE_NAME}_HEADERS} )

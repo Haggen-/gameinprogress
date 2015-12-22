@@ -12,18 +12,20 @@
 #include <GL/gl.h>
 #include "../window/Window.h"
 #include "../components/GraphicsEntity.h"
+#include "../components/Scene.h"
 
 namespace Naglfar {
     class Renderer {
     public:
         Renderer(Naglfar::Window *window);
         ~Renderer();
+
+        void addScene(Naglfar::Scene &scene);
         void addDrawable(Naglfar::GraphicsEntity *drawable);
         void drawAll();
     private:
         SDL_Renderer *renderer;
-        Naglfar::GraphicsEntity *thingsToDraw[6];
-        int numberOfDrawables;
+        SDL_GLContext glContext;
     };
 }
 

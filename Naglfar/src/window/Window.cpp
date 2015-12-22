@@ -32,3 +32,7 @@ Naglfar::Window::~Window() {
 SDL_Renderer* Naglfar::Window::GetRenderer() {
     return renderer;
 }
+
+SDL_Window *Naglfar::Window::GetWindow() {
+    return window;
+}

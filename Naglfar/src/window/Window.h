@@ -15,8 +15,8 @@ namespace Naglfar {
     class Window {
     public:
         Window(std::string windowName);
-        void Draw();
         SDL_Renderer* GetRenderer();
+        SDL_Window* GetWindow();
         ~Window();
     private:
         SDL_Renderer *renderer;

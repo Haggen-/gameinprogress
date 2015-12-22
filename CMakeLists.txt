@@ -1,3 +1,9 @@
+############################################################
+#                                                          #
+# Tested with: Lua5.2, SDL2 (2.0.3), SDL2-Image, GLEW 1.13 #
+#                                                          #
+############################################################
+
 cmake_minimum_required(VERSION 3.0.2)
 
 set(PROJECT_NAME "GameInProgress")
@@ -46,5 +52,5 @@ if(NOT ${GLEW_FOUND})
     message(FATAL_ERROR "COULD NOT FIND OpenGL Extension Wrangler")
 endif()
 
-include_directories(src ${LUA_INCLUDE_DIR} ${${PROJECT_NAME}_INCLUDE_DIRS} ${SDL2_INCLUDE_DIR} ${GLEW_INCLUDE_DIRS})
-target_link_libraries(${PROJECT_NAME} ${LUA_LIBRARY} ${SDL2_LIBRARY} ${SDLIMAGE_LIBRARY} ${GLEW_LIBRARIES} Naglfar)
+include_directories(src ${LUA_INCLUDE_DIR} ${${PROJECT_NAME}_INCLUDE_DIRS} ${SDL2_INCLUDE_DIR} ${GLEW_INCLUDE_DIRS} ${OPENGL_INCLUDE_DIR})
+target_link_libraries(${PROJECT_NAME} ${LUA_LIBRARY} ${SDL2_LIBRARY} ${SDLIMAGE_LIBRARY} ${GLEW_LIBRARIES} ${OPENGL_LIBRARIES} Naglfar)
